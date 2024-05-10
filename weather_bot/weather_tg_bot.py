@@ -24,6 +24,9 @@ dp = Dispatcher()
 
 
 def get_metres_per_second(kph):
+    """
+    Convert kilometers per hour to meters per second.
+    """
     return ceil(kph * (1000/3600))
 
 
@@ -38,6 +41,9 @@ async def command_start_handler(message: Message) -> None:
 
 @dp.message()
 async def get_weather(message: Message):
+    """
+    Handler function to fetch weather information based on user's input city.
+    """
     try:
         url = f"{BASE_URL}?key={API_KEY}&q={message.text}&lang={LANGUAGE}&units=metric"
         response = requests.get(url)
@@ -58,7 +64,7 @@ async def get_weather(message: Message):
 
             await message.answer("Here is the weather for your city...")
             await message.reply(
-                f"***{datetime.now().strftime("%Y-%m-%d %H:%M")}***,\n"
+                f"***{datetime.now().strftime("%Y-%m-%d %H:%M")}***,\n\n"
                 f"Country/City: {country_name},{city_name}\n"
                 f"Localtime: {localtime},\n\n"
                 f"Weather condition: {WEATHER_CONDITION.get(weather_description, weather_description)},\n"
@@ -83,4 +89,3 @@ async def main() -> None:
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, stream=sys.stdout)
     asyncio.run(main())
-
