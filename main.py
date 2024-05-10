@@ -12,15 +12,21 @@ def get_weather(city):
 
             country_name = data["location"]["country"]
             city_name = data["location"]["name"]
+            localtime = data["location"]["localtime"]
             temp_c = data["current"]["temp_c"]
             feels_like_c = data["current"]["feelslike_c"]
             temp_f = data["current"]["temp_f"]
             feels_like_f = data["current"]["feelslike_f"]
+            wind_speed = data["current"]["wind_kph"]
+            humidity = data["current"]["humidity"]
 
-            print(f"City: {city_name},\n"
-                  f"Country: {country_name},\n"
-                  f"Temperature C: {temp_c}, (feels like: {feels_like_c}),\n"
-                  f"Temperature F: {temp_f}, (feels like: {feels_like_f}).\n")
+            print(f"🌆 City: {city_name},\n"
+                  f"🌎 Country: {country_name},\n"
+                  f"⌚️ Localtime: {localtime},\n"
+                  f"🌡 Temperature C: {temp_c}, (feels like: {feels_like_c}),\n"
+                  f"🌡 Temperature F: {temp_f}, (feels like: {feels_like_f}),\n"
+                  f"💨 Wind Speed: {wind_speed} kph,\n"
+                  f"💧 Humidity: {humidity},\n")
 
     except Exception as error:
         print(error)
