@@ -1,9 +1,10 @@
 # Telegram Weather Bot
 
+---
 ![img.png](img.png)
 
 > Telegram Weather Bot is a simple bot that provides weather updates for different cities.
-
+---
 ## Features
 
 - Get current weather by typing the name of the city.
@@ -29,3 +30,4 @@
 * **Operating System Interfaces**: `os`
 * **Date and Time Manipulation**: `datetime`
 * **Mathematical Functions**: `math`
+---

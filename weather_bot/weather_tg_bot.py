@@ -64,7 +64,7 @@ async def get_weather(message: Message):
 
             await message.answer("Here is the weather for your city...")
             await message.reply(
-                f"***{datetime.now().strftime("%Y-%m-%d %H:%M")}***,\n\n"
+                f"***{datetime.now().strftime('%Y-%m-%d %H:%M')}***,\n\n"
                 f"Country/City: {country_name},{city_name}\n"
                 f"Localtime: {localtime},\n\n"
                 f"Weather condition: {WEATHER_CONDITION.get(weather_description, weather_description)},\n"
