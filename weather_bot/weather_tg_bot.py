@@ -12,7 +12,7 @@ from aiogram import Bot, Dispatcher
 from aiogram.filters import CommandStart
 from aiogram.types import Message
 
-from config import BASE_URL, LANGUAGE, WEATHER_CONDITION
+from weather_bot.config import BASE_URL, LANGUAGE, WEATHER_CONDITION
 
 
 load_dotenv()

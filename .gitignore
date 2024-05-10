@@ -234,14 +234,14 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-config.py
+weather_bot/config.py
 .venv
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
-.env
+weather_bot/.env
 
 # Spyder project settings
 .spyderproject
