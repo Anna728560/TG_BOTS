@@ -56,6 +56,7 @@ async def get_weather(message: Message):
             wind_speed = get_metres_per_second(data["current"]["wind_kph"])
             humidity = data["current"]["humidity"]
 
+            await message.answer("Here is the weather for your city...")
             await message.reply(
                 f"***{datetime.now().strftime("%Y-%m-%d %H:%M")}***,\n"
                 f"Country/City: {country_name},{city_name}\n"
