@@ -12,7 +12,7 @@ from aiogram import Bot, Dispatcher
 from aiogram.filters import CommandStart
 from aiogram.types import Message
 
-from weather_bot.config import BASE_URL, LANGUAGE, WEATHER_CONDITION
+from config import BASE_URL, LANGUAGE, WEATHER_CONDITION
 
 
 load_dotenv()
@@ -46,7 +46,8 @@ async def get_weather(message: Message):
     """
     try:
         url = f"{BASE_URL}?key={API_KEY}&q={message.text}&lang={LANGUAGE}&units=metric"
-        response = requests.get(url)
+        proxy = os.getenv("https_proxy", "")
+        response = requests.get(url, proxies={'https': proxy})
 
         if response.status_code == 200:
             data = response.json()

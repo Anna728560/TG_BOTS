@@ -22,20 +22,20 @@ pip install -r requirements.txt
 ```
 
 
-
-
 ## Bots Included 🤖:
 ### Weather Bot
 
-This is an asynchronous Telegram bot built with Python that provides weather information. The bot allows users to request weather updates for a specific location by sending a name of the city
+- This is an asynchronous Telegram bot built with Python that provides weather information. 
+- Bot allows to get weather updates for a specific location by sending a name of the city.
+- [read how to run](weather_bot/README.md)
+
+### Web Scraping Bot(soon):
+- This Telegram bot will scrape job vacancies from the Work.ua website 
+- Returns a list of the most popular technologies for the position entered by the user.
 
 ### Task Manager(soon):
 - A bot that helps users create and manage tasks.
 - Features include creating, editing and deleting tasks.
-
-### Financial tracker(soon):
-- Bot for tracking expenses and income.
-- May provide financial status reports, statistics, and savings tips.
 
 ### Translator bot(soon):
 - A bot that provides quick access to text translation between different languages.
