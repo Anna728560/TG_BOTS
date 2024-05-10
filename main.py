@@ -1,6 +1,11 @@
 import requests
 from datetime import datetime
 from config import API_KEY, BASE_URL, LANGUAGE, WEATHER_CONDITION
+from math import ceil
+
+
+def get_metres_per_second(kph):
+    return ceil(kph * (1000/3600))
 
 
 def get_weather(city):
@@ -19,7 +24,7 @@ def get_weather(city):
             feels_like_c = data["current"]["feelslike_c"]
             temp_f = data["current"]["temp_f"]
             feels_like_f = data["current"]["feelslike_f"]
-            wind_speed = data["current"]["wind_kph"]
+            wind_speed = get_metres_per_second(data["current"]["wind_kph"])
             humidity = data["current"]["humidity"]
 
             print(f"***{datetime.now().strftime("%Y-%m-%d %H:%M")}***,\n"
@@ -28,7 +33,7 @@ def get_weather(city):
                   f"Weather condition: {WEATHER_CONDITION.get(weather_description, weather_description)},\n"
                   f"🌡 Temperature C: {temp_c}, (feels like: {feels_like_c}),\n"
                   f"🌡 Temperature F: {temp_f}, (feels like: {feels_like_f}),\n\n"
-                  f"Wind Speed: {wind_speed} kilometer per hour,\n"
+                  f"Wind Speed: {wind_speed} metres per second,\n"
                   f"Humidity: {humidity},\n\n"
                   f"😃 Have a Great Day!\n")
 
