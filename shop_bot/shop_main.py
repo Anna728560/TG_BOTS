@@ -5,7 +5,7 @@ import sys
 from aiogram import Bot, Dispatcher
 
 from shop_bot.database.db_config import async_main
-from shop_bot.handlers import router
+from shop_bot.bot_config.handlers import router
 
 
 async def main():

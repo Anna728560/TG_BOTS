@@ -3,7 +3,7 @@ from aiogram.filters import CommandStart, Command
 from aiogram.types import Message, CallbackQuery
 
 import shop_bot.database.requests as rq
-import shop_bot.keyboards as kb
+import shop_bot.bot_config.keyboards as kb
 
 router = Router()
 

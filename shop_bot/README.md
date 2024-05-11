@@ -1,7 +1,7 @@
 # Magic Brews Bot 🪄
 
 ---
-![img.png](img.png)
+![img.png](images_for_readme/img.png)
 
 > Magic Brews Bot is a fun Telegram bot that offers a variety of magical potions for all your mystical needs. 🧙‍♂️✨
 ---
@@ -50,4 +50,4 @@
 * **Aiosqlite**: `aiosqlite`
 ---
 ## Demo:
-![img_1.png](img_1.png)
+![img_1.png](images_for_readme/img_1.png)
