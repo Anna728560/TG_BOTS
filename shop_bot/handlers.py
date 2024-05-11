@@ -17,7 +17,7 @@ async def cmd_start(message: Message):
         "✨ Hello! I'm your Magic Brews bot 🧙‍♂️.\n"
         "I have a cauldron full of magical potions!\n"
         "Choose the category of potion you need:\n",
-        reply_markup=await kb.inline_keyboard()
+        reply_markup=await kb.inline_categories()
     )
 
 

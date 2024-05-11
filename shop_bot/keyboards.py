@@ -14,7 +14,7 @@ async def get_categories():
         return categories
 
 
-async def inline_keyboard():
+async def inline_categories():
     categories = await get_categories()
     keyboard = InlineKeyboardBuilder()
     for category in categories:
