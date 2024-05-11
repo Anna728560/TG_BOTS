@@ -88,5 +88,8 @@ async def main() -> None:
 
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO, stream=sys.stdout)
-    asyncio.run(main())
+    try:
+        logging.basicConfig(level=logging.INFO, stream=sys.stdout)
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        print("Shutting down")
