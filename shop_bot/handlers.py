@@ -1,5 +1,3 @@
-import asyncio
-
 from aiogram import Router, F
 from aiogram.filters import CommandStart, Command
 from aiogram.types import Message, CallbackQuery
@@ -27,7 +25,7 @@ async def cmd_help(message: Message):
 
 
 @router.callback_query(F.data.startswith("category_"))
-async def category(callback: CallbackQuery):
+async def category_items(callback: CallbackQuery):
     await callback.answer("You made your choice, and that's perfectly fine!")
     await callback.message.answer(
         text="Chose the potion you need 🧪",
@@ -49,4 +47,11 @@ async def item(callback: CallbackQuery):
     )
 
 
+@router.callback_query(F.data.startswith("back_"))
+async def back_to_categories(callback: CallbackQuery):
+    await callback.answer("Return to the Magic Brews Menu... 🍵")
+    await callback.message.answer(
+        text="Chose the potion you need 🧪",
+        reply_markup=await kb.inline_categories()
+    )
 

@@ -22,5 +22,8 @@ async def inline_items(category_id: int):
             text=item.name,
             callback_data=f"item_{item.id}")
         )
-    keyboard.add(InlineKeyboardButton(text="Back", callback_data="to_main"))
+    keyboard.add(InlineKeyboardButton(
+        text="Back",
+        callback_data="back_to_categories")
+    )
     return keyboard.adjust(2).as_markup()
