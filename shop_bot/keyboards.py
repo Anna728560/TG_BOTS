@@ -1,22 +1,26 @@
-from aiogram.types import (
-    InlineKeyboardButton
-)
+from aiogram.types import InlineKeyboardButton
 from aiogram.utils.keyboard import InlineKeyboardBuilder
-from shop_bot.database.models import Category
-from shop_bot.database.db_config import async_session
-from sqlalchemy import select
-
-
-async def get_categories():
-    async with async_session() as session:
-        query = await session.execute(select(Category.name))
-        categories = query.scalars().all()
-        return categories
+from shop_bot.database.requests import get_categories, get_category_items
 
 
 async def inline_categories():
     categories = await get_categories()
     keyboard = InlineKeyboardBuilder()
     for category in categories:
-        keyboard.add(InlineKeyboardButton(text=category, url="https://www.google.com"))
+        keyboard.add(InlineKeyboardButton(
+            text=category.name,
+            callback_data=f"category_{category.id}")
+        )
+    return keyboard.adjust(1).as_markup()
+
+
+async def inline_items(category_id: int):
+    items = await get_category_items(category_id)
+    keyboard = InlineKeyboardBuilder()
+    for item in items:
+        keyboard.add(InlineKeyboardButton(
+            text=item.name,
+            callback_data=f"item_{item.id}")
+        )
+    keyboard.add(InlineKeyboardButton(text="Back", callback_data="to_main"))
     return keyboard.adjust(2).as_markup()
