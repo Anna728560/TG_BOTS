@@ -29,33 +29,14 @@ pip install -r requirements.txt
 - Bot allows to get weather updates for a specific location by sending a name of the city.
 - [read how to run](weather_bot/README.md)
 
+### Magic Brews Bot
+- Magic Brews Bot is a fun bot that offers a variety of magical potions for all your mystical needs. 🧙‍♂️✨
+- Browse and purchase a wide range of magical potions.
+- Explore different categories of potions such as Mind-Enhancing Elixirs, Memory-Boosting Brews, Creativity-Inducing Potions, Concentration Elixirs, and more.
+- Easy to use interface with emoji-enhanced interactions. 🪄🔮
+- [read how to run](shop_bot/README.md)
+
 ### Web Scraping Bot(soon):
 - This Telegram bot will scrape job vacancies from the Work.ua website 
 - Returns a list of the most popular technologies for the position entered by the user.
-
-### Task Manager(soon):
-- A bot that helps users create and manage tasks.
-- Features include creating, editing and deleting tasks.
-
-### Translator bot(soon):
-- A bot that provides quick access to text translation between different languages.
-
-### Shopping Bot(soon):
-- Receives requests for searching and purchasing goods from users through a bot.
-- Answers user questions and helps with product selection.
-- Places orders and provides information about order status.
-- Offers discounts and promotions to attract new customers and retain existing ones.
-
-
-
-
-
-
-
-
-
-
-
-
-
 

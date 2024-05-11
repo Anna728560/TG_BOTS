@@ -50,5 +50,4 @@ async def fill_database():
 async def async_main():
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
-        # временно комментирую. бд уже настроена
-        # await fill_database()
+        await fill_database()
