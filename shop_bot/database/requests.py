@@ -24,14 +24,44 @@ async def set_user(tg_id: int) -> None:
             await session.commit()
 
 
-async def get_categories() -> List[str]:
+async def get_categories() -> List[Category]:
     """
     Retrieves the list of categories from the database.
 
     Returns:
-        list[str]: List of category names.
+        list[Category]: List of category names.
     """
     async with async_session() as session:
-        query = await session.execute(select(Category.name))
-        categories = query.scalars().all()
-        return categories
+        return await session.scalars(select(Category))
+
+
+async def get_category_items(category_id: int) -> List[Item]:
+    """
+    Retrieves items belonging to the specified category.
+
+    Parameters:
+        category_id (int): ID of the category.
+
+    Returns:
+        List[Item]: List of items belonging to the specified category.
+    """
+    async with async_session() as session:
+        return await session.scalars(
+            select(Item).where(Item.category == category_id)
+        )
+
+
+async def get_item(item_id: int) -> Item:
+    """
+    Retrieves the item with the specified ID.
+
+    Parameters:
+        item_id (int): ID of the item.
+
+    Returns:
+        Item: Item with the specified ID.
+    """
+    async with async_session() as session:
+        return await session.scalar(
+            select(Item).where(Item.id == item_id)
+        )
