@@ -1,4 +1,4 @@
-from shop_bot.database.models import async_session
+from shop_bot.database.db_config import async_session
 from shop_bot.database.models import User, Category, Item
 from sqlalchemy import select
 
