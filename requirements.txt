@@ -57,3 +57,5 @@ greenlet~=3.0.3
 SQLAlchemy~=2.0.29
 psycopg~=3.1.18
 wsproto~=1.2.0
+aiosqlite~=0.20.0
+aiofiles~=23.2.1

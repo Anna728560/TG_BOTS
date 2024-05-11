@@ -1,0 +1,122 @@
+[
+    {
+        "model": "shop_bot.item",
+        "pk": 1,
+        "name": "Brain Blast Brew 🚀",
+        "description": "Feel your brain blast into overdrive with this potent potion! Perfect for those moments when you need to outsmart even the trickiest of riddles.",
+        "price": "10.99",
+        "category": 1
+    },
+    {
+        "model": "shop_bot.item",
+        "pk": 2,
+        "name": "Genius Juice 🧠💡",
+        "description": "Unlock your inner genius with this magical elixir! Enhance your cognitive abilities and tackle complex problems with ease.",
+        "price": "12.99",
+        "category": 1
+    },
+    {
+        "model": "shop_bot.item",
+        "pk": 3,
+        "name": "Wizard's Wisdom Potion 📚🔮",
+        "description": "Channel the wisdom of the ancients with this enchanted elixir! Perfect for studying, problem-solving, and impressing your friends with random facts.",
+        "price": "14.99",
+        "category": 1
+    },
+    {
+        "model": "shop_bot.item",
+        "pk": 4,
+        "name": "Forget-Me-Not Tonic 🌼",
+        "description": "Never forget a thing with this magical tonic! Boost your memory and remember even the tiniest details with ease.",
+        "price": "11.99",
+        "category": 2
+    },
+    {
+        "model": "shop_bot.item",
+        "pk": 5,
+        "name": "Elephant Elixir 🐘",
+        "description": "Unleash your inner elephant with this powerful elixir! Remember everything from where you left your keys to the birthday of your second cousin twice removed.",
+        "price": "13.99",
+        "category": 2
+    },
+    {
+        "model": "shop_bot.item",
+        "pk": 6,
+        "name": "Memory Marvel Potion 🚀🧠",
+        "description": "Boost your memory to superhero levels with this marvelous potion! Impress your friends with your encyclopedic knowledge and never forget an important date again.",
+        "price": "15.99",
+        "category": 2
+    },
+    {
+        "model": "shop_bot.item",
+        "pk": 7,
+        "name": "Imagination Ignition Elixir 🔥✨",
+        "description": "Ignite your imagination with this magical elixir! Perfect for artists, writers, and anyone in need of a creative spark.",
+        "price": "12.99",
+        "category": 3
+    },
+    {
+        "model": "shop_bot.item",
+        "pk": 8,
+        "name": "Dream Weaver Brew 🌈🌙",
+        "description": "Weave dreams into reality with this enchanting brew! Unleash your creativity and bring your wildest ideas to life.",
+        "price": "14.99",
+        "category": 3
+    },
+    {
+        "model": "shop_bot.item",
+        "pk": 9,
+        "name": "Inspiration Infusion Potion 💡💭",
+        "description": "Infuse yourself with inspiration with this magical potion! Say goodbye to creative blocks and hello to endless ideas.",
+        "price": "16.99",
+        "category": 3
+    },
+        {
+        "model": "shop_bot.item",
+        "pk": 10,
+        "name": "Focus Fizz Elixir 💥🔍",
+        "description": "Fizz your way to better focus with this potent elixir! Perfect for those moments when you need to concentrate on the task at hand.",
+        "price": "10.99",
+        "category": 4
+    },
+    {
+        "model": "shop_bot.item",
+        "pk": 11,
+        "name": "Study Serum 📖🔬",
+        "description": "Boost your study sessions with this powerful serum! Enhance your concentration and absorb information like a sponge.",
+        "price": "12.99",
+        "category": 4
+    },
+    {
+        "model": "shop_bot.item",
+        "pk": 12,
+        "name": "Mindful Magic Potion ✨🧘‍♂️",
+        "description": "Harness the power of mindfulness with this magical potion! Achieve laser-like focus and banish distractions with ease.",
+        "price": "14.99",
+        "category": 4
+    },
+    {
+        "model": "shop_bot.item",
+        "pk": 13,
+        "name": "Luck of the Unicorn Potion 🦄🍀",
+        "description": "Brewed from the tears of a unicorn, this potion brings you luck in all your endeavors! Wear it as a charm or sprinkle it on your enemies as a curse.",
+        "price": "15.99",
+        "category": 5
+    },
+    {
+        "model": "shop_bot.item",
+        "pk": 14,
+        "name": "Hex-Breaker Elixir 🔮🛡️",
+        "description": "Break free from any curse with this powerful elixir! Whether you've been hexed by a witch or just had a run of bad luck, this potion will set things right.",
+        "price": "17.99",
+        "category": 5
+    },
+    {
+        "model": "shop_bot.item",
+        "pk": 15,
+        "name": "Enchantment Eraser Brew ✨🔒",
+        "description": "Remove unwanted enchantments with this magical brew! Whether you're cursed by a wicked sorcerer or just regretting a bad decision, this potion will undo the magic.",
+        "price": "19.99",
+        "category": 5
+    }
+]
