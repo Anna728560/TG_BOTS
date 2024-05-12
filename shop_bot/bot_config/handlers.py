@@ -43,7 +43,8 @@ async def item(callback: CallbackQuery):
              f"__Description__\n"
              f"🪄{item_data.description}\n\n"
              f"Price: $ {item_data.price}",
-        reply_markup=await kb.inline_items(int(callback.data.split("_")[1]))
+        # reply_markup=await kb.inline_items(int(callback.data.split("_")[1]))
+        reply_markup=await kb.item_details()
     )
 
 
