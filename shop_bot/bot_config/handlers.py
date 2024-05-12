@@ -1,9 +1,13 @@
 from aiogram import Router, F
-from aiogram.enums import ContentType
 from aiogram.filters import CommandStart, Command
-from aiogram.types import Message, CallbackQuery, LabeledPrice, PreCheckoutQuery
+from aiogram.types import (
+    Message,
+    CallbackQuery,
+    LabeledPrice,
+    PreCheckoutQuery
+)
 from aiogram.fsm.state import StatesGroup, State
-from aiogram.types.successful_payment import SuccessfulPayment
+
 import shop_bot.database.requests as rq
 import shop_bot.bot_config.keyboards as kb
 from shop_bot.bot_config.bot import bot
