@@ -33,6 +33,12 @@
 2. Select a category of potions you're interested in.
 3. Browse through the potions available in that category.
 4. Select a potion to view its details and purchase it.
+5. To test payment use this data and follow bot instructions (4444 3333 2222 1111, 11/24/111)
+
+6. If your payment successful you will see this message:
+
+![img.png](img.png)
+
 5. Enjoy your magical potion! 🌟✨
 ---
 
@@ -41,6 +47,7 @@
 * **Programming Language:** `Python`
 * **Telegram Bot Framework:** `aiogram`
 * **Asynchronous Programming:** `asyncio`
+* **Payment System:** `Portmone`
 
 ## Additional Libraries:
 
