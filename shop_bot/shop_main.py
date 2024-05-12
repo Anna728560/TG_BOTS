@@ -2,7 +2,7 @@ import asyncio
 import logging
 import sys
 
-from aiogram import Bot, Dispatcher
+from aiogram import Dispatcher
 
 from shop_bot.database.db_config import async_main
 from shop_bot.bot_config.handlers import router
@@ -11,7 +11,6 @@ from shop_bot.bot_config.bot import bot
 
 async def main():
     await async_main()
-    # bot = Bot(token="6919714198:AAHRbrPvSZeluxyEc6DDRfeMdkljZ2nkgeY")
     dp = Dispatcher()
 
     dp.include_router(router)
