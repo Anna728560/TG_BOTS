@@ -27,3 +27,16 @@ async def inline_items(category_id: int):
         callback_data="back_to_categories")
     )
     return keyboard.adjust(2).as_markup()
+
+
+async def item_details(item_id: int):
+    keyboard = InlineKeyboardBuilder()
+    keyboard.add(InlineKeyboardButton(
+        text="I'm buying!📦",
+        callback_data=f"to_pay_item_{item_id}")
+    )
+    keyboard.add(InlineKeyboardButton(
+        text="Back",
+        callback_data="back_to_categories")
+    )
+    return keyboard.adjust(2).as_markup()
