@@ -1,9 +1,13 @@
 from aiogram import Router, F
-from aiogram.enums import ContentType
 from aiogram.filters import CommandStart, Command
-from aiogram.types import Message, CallbackQuery, LabeledPrice, PreCheckoutQuery
+from aiogram.types import (
+    Message,
+    CallbackQuery,
+    LabeledPrice,
+    PreCheckoutQuery
+)
 from aiogram.fsm.state import StatesGroup, State
-from aiogram.types.successful_payment import SuccessfulPayment
+
 import shop_bot.database.requests as rq
 import shop_bot.bot_config.keyboards as kb
 from shop_bot.bot_config.bot import bot
@@ -80,21 +84,22 @@ async def to_pay(callback: CallbackQuery):
 
     await bot.send_invoice(
         callback.message.chat.id,
-        title=item_data.name,
-        description=item_data.description,
+        title="Buying a magic brew...",
+        description=item_data.name,
         provider_token="2051251535:TEST:OTk5MDA4ODgxLTU",
         currency="USD",
+        photo_url="https://img.freepik.com/premium-vector/magic-cauldron-flat-illustration_44769-59.jpg",
+        photo_width=600,
+        photo_height=468,
+        is_flexible=False,
         prices=prices,
-        start_parameter="create_invoice",
-        payload="some_invoice"
-    )
+        payload="test-invoice-payload")
 
 
 def calculate_price(price_in_usd_str: str) -> float:
     return float(price_in_usd_str)
 
 
-@router.pre_checkout_query(lambda q: True)
+@router.pre_checkout_query(lambda query: True)
 async def checkout_process(pre_checkout_query: PreCheckoutQuery):
     await bot.answer_pre_checkout_query(pre_checkout_query.id, ok=True)
-
