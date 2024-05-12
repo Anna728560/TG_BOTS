@@ -86,8 +86,8 @@ async def to_pay(callback: CallbackQuery):
         callback.message.chat.id,
         title="Buying a magic brew...",
         description=item_data.name,
-        provider_token="2051251535:TEST:OTk5MDA4ODgxLTU",
-        currency="USD",
+        provider_token="1661751239:TEST:BFI1-Dev2-ZVE9-vr3L",
+        currency="UAH",
         photo_url="https://img.freepik.com/premium-vector/magic-cauldron-flat-illustration_44769-59.jpg",
         photo_width=600,
         photo_height=468,
@@ -96,8 +96,8 @@ async def to_pay(callback: CallbackQuery):
         payload="test-invoice-payload")
 
 
-def calculate_price(price_in_usd_str: str) -> float:
-    return float(price_in_usd_str)
+def calculate_price(price_in_uah_str: str) -> float:
+    return float(price_in_uah_str)
 
 
 @router.pre_checkout_query(lambda query: True)
